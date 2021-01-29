@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StarWarsFilmInterface } from '../../interfaces/StarWars';
-import StarWarsFilm from './Film';
+import StarWarsFilm from './StarWarsFilm';
 
 interface Props {
   films: StarWarsFilmInterface[];

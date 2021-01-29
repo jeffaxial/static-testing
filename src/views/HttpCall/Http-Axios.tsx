@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { StarWarsCharacterInterface } from '../../interfaces/StarWars';
 import Loading from '../../components/Loading';
-import StarWarsCharacterList from '../../components/StarWars/CharacterList';
+import StarWarsCharacterList from '../../components/StarWars/StarWarsCharacterList';
 
 function HttpAxios() {
   const [characters, setCharacters] = useState<StarWarsCharacterInterface[]>([]);

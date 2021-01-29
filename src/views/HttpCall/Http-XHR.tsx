@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StarWarsCharacterInterface } from '../../interfaces/StarWars';
-import StarWarsCharacterList from '../../components/StarWars/CharacterList';
+import StarWarsCharacterList from '../../components/StarWars/StarWarsCharacterList';
 import Loading from '../../components/Loading';
 
 function HttpXHR() {

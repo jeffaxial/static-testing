@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import { StarWarsCharacterInterface, StarWarsFilmInterface } from '../../interfaces/StarWars';
 import Loading from '../../components/Loading';
-import StarWarsCharacterList from '../../components/StarWars/CharacterList';
-import StarWarsFilmList from '../../components/StarWars/FilmList';
+import StarWarsCharacterList from '../../components/StarWars/StarWarsCharacterList';
+import StarWarsFilmList from '../../components/StarWars/StarWarsFilmList';
 
 const instance = axios.create({
   baseURL: 'https://swapi.co/api',
