@@ -4,16 +4,15 @@ import List from '../../components/Todos/List';
 import { Todo } from '../../interfaces/Todos-Interface';
 
 function StateLocal() {
-
   const initialTodos: Todo[] = [
     {
       value: 'Clean the kitchen',
-      done: false
+      done: false,
     },
     {
       value: 'Wash the car',
-      done: true
-    }
+      done: true,
+    },
   ];
 
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
@@ -21,45 +20,36 @@ function StateLocal() {
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
-  }
+  };
 
   const handleSubmit = (evt: React.FormEvent) => {
     evt.preventDefault();
     const todo: Todo = {
       value: inputValue ? inputValue : '',
-      done: false
-    }
+      done: false,
+    };
     const todosNew: Todo[] = todos.concat(todo);
     setTodos(todosNew);
     setInputValue('');
-  }
+  };
 
   const handleClick = (index: number) => {
     const todosNew = todos.map((todo: Todo, todoIndex: number) => {
       return {
         ...todo,
-        done: todoIndex === index ? !todo.done : todo.done
-      }
+        done: todoIndex === index ? !todo.done : todo.done,
+      };
     });
     setTodos(todosNew);
-  }
+  };
 
   return (
     <div className="Todos-Local">
       <h1>Local State</h1>
-      <Form
-        inputValue={inputValue}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      {todos ? (
-        <List
-          todos={todos}
-          handleClick={handleClick}
-        />
-      ) : undefined }
-     </div>
-  )
+      <Form inputValue={inputValue} handleChange={handleChange} handleSubmit={handleSubmit} />
+      {todos ? <List todos={todos} handleClick={handleClick} /> : undefined}
+    </div>
+  );
 }
 
 export default StateLocal;

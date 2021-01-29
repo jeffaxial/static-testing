@@ -7,12 +7,14 @@ interface Props {
 
 function StarWarsCharacter(props: Props) {
   return (
-    <div className="Character" style={{marginTop: '20px'}}>
-      <div><strong>{ props.character.name }</strong></div>
-      <div>{ props.character.gender }</div>
-      <div>{ props.character.birth_year }</div>
+    <div className="Character" style={{ marginTop: '20px' }}>
+      <div>
+        <strong>{props.character.name}</strong>
+      </div>
+      <div>{props.character.gender}</div>
+      <div>{props.character.birth_year}</div>
     </div>
-  )
+  );
 }
 
 export default StarWarsCharacter;

@@ -6,7 +6,6 @@ import HttpAxios from './Http-Axios';
 import HttpAxiosInstance from './Http-Axios-Instance';
 
 function HttpCall() {
-
   return (
     <div className="HttpCall Content-Wrapper">
       <Fragment>
@@ -21,7 +20,7 @@ function HttpCall() {
         </div>
       </Fragment>
     </div>
-  )
+  );
 }
 
 export default HttpCall;

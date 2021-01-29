@@ -9,16 +9,15 @@ import StateParent from './State-Parent';
 import StateNav from './State-Nav';
 
 function State() {
-
   const initialTodosForChild: Todo[] = [
     {
       value: 'Clean the kitchen',
-      done: false
+      done: false,
     },
     {
       value: 'Wash the car',
-      done: true
-    }
+      done: true,
+    },
   ];
 
   const [todosForChild, setTodosForChild] = useState<Todo[]>(initialTodosForChild);
@@ -30,14 +29,17 @@ function State() {
         <div className="Content Content-Padded">
           <Switch>
             <Route path="/state/local" component={StateLocal} />
-            <Route path="/state/parent" component={() => <StateParent todos={todosForChild} setTodos={setTodosForChild} /> }/>
+            <Route
+              path="/state/parent"
+              component={() => <StateParent todos={todosForChild} setTodos={setTodosForChild} />}
+            />
             <Route path="/state/global" component={StateGlobal} />
             <Redirect to="/state/local" />
           </Switch>
         </div>
       </Fragment>
     </div>
-  )
+  );
 }
 
 export default State;

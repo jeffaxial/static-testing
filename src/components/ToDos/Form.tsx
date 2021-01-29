@@ -9,16 +9,11 @@ interface Props {
 function Form(props: Props) {
   return (
     <div className="Form">
-      <form
-        onSubmit={(evt) => props.handleSubmit(evt)}
-      >
-        <input
-          onChange={(evt) => props.handleChange(evt)}
-          value={props.inputValue}
-        />
+      <form onSubmit={(evt) => props.handleSubmit(evt)}>
+        <input onChange={(evt) => props.handleChange(evt)} value={props.inputValue} />
       </form>
     </div>
-  )
+  );
 }
 
 export default Form;

@@ -10,12 +10,10 @@ function StarWarsCharacterList(props: Props) {
   return (
     <div className="StarWarsCharacterList">
       {props.characters.map((character: StarWarsCharacterInterface, index: number) => {
-        return (
-          <StarWarsCharacter key={index} character={character} />
-        )
+        return <StarWarsCharacter key={index} character={character} />;
       })}
     </div>
-  )
+  );
 }
 
 export default StarWarsCharacterList;

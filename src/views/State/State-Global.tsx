@@ -5,12 +5,11 @@ import { Todo } from '../../interfaces/Todos-Interface';
 import { StateContextConsumer, StateContextInterface } from '../../context/todo-context';
 
 function StateGlobal() {
-
   const [inputValue, setInputValue] = useState<string>('');
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
-  }
+  };
 
   const handleSubmit = (evt: React.FormEvent, todosContext: StateContextInterface | undefined) => {
     if (!todosContext) {
@@ -19,12 +18,12 @@ function StateGlobal() {
     evt.preventDefault();
     const todo: Todo = {
       value: inputValue ? inputValue : '',
-      done: false
-    }
+      done: false,
+    };
     const todosNew: Todo[] = todosContext.todos.concat(todo);
     todosContext.setTodos(todosNew);
     setInputValue('');
-  }
+  };
 
   const handleClick = (index: number, todosContext: StateContextInterface | undefined) => {
     if (!todosContext) {
@@ -33,34 +32,34 @@ function StateGlobal() {
     const todosNew = todosContext.todos.map((todo: Todo, todoIndex: number) => {
       return {
         ...todo,
-        done: todoIndex === index ? !todo.done : todo.done
-      }
+        done: todoIndex === index ? !todo.done : todo.done,
+      };
     });
     todosContext.setTodos(todosNew);
-  }
+  };
 
   return (
     <div className="Todos-Global">
       <h1>Global State</h1>
       <StateContextConsumer>
-        { todosContext => {
+        {(todosContext) => {
           return (
             <Fragment>
               <Form
                 inputValue={inputValue}
                 handleChange={handleChange}
-                handleSubmit={evt => handleSubmit(evt, todosContext)}
+                handleSubmit={(evt) => handleSubmit(evt, todosContext)}
               />
               <List
                 todos={todosContext ? todosContext.todos : []}
-                handleClick={evt => handleClick(evt, todosContext)}
+                handleClick={(evt) => handleClick(evt, todosContext)}
               />
             </Fragment>
-          )
+          );
         }}
       </StateContextConsumer>
-     </div>
-  )
+    </div>
+  );
 }
 
 export default StateGlobal;

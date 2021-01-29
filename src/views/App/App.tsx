@@ -15,43 +15,42 @@ export const appRoutes: RouteConfig[] = [
   {
     path: '/state',
     name: 'State',
-    component: State
+    component: State,
   },
   {
     path: '/params',
     name: 'Params',
-    component: Params
+    component: Params,
   },
   {
     path: '/http',
     name: 'Http',
-    component: HttpCall
+    component: HttpCall,
   },
   {
     path: '/hoc',
     name: 'HOC',
-    component: HOC
-  }
-]
+    component: HOC,
+  },
+];
 
 function App() {
-
   const initialTodos: Todo[] = [
     {
       value: 'Clean the kitchen!!!!',
-      done: false
+      done: false,
     },
     {
       value: 'Wash the car',
-      done: true
-    }
+      done: true,
+    },
   ];
 
   const [todos, setTodos] = useState(initialTodos);
   const todosContext: StateContextInterface = {
     todos: todos,
     setTodos: setTodos,
-  }
+  };
 
   return (
     <div className="App">
@@ -61,10 +60,8 @@ function App() {
             <Nav />
             <div className="Content">
               <Switch>
-                { appRoutes.map((route: RouteConfig) => {
-                  return (
-                    <Route path={route.path} component={route.component} />
-                  )
+                {appRoutes.map((route: RouteConfig) => {
+                  return <Route path={route.path} component={route.component} />;
                 })}
                 <Redirect to={appRoutes[0].path} />
               </Switch>
@@ -73,7 +70,7 @@ function App() {
         </BrowserRouter>
       </StateContextProvider>
     </div>
-  )
+  );
 }
 
 export default App;

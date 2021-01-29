@@ -11,12 +11,12 @@ function Params() {
         <div className="Content Content-Padded">
           <Switch>
             <Route path={'/params/:param'} component={ParamsView} />
-            <Redirect to='params/cool' />
+            <Redirect to="params/cool" />
           </Switch>
         </div>
       </Fragment>
     </div>
-  )
+  );
 }
 
 export default Params;

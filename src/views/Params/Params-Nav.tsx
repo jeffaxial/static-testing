@@ -22,7 +22,7 @@ function ParamsNav() {
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
 export default ParamsNav;

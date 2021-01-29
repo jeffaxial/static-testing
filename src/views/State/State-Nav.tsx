@@ -16,7 +16,7 @@ function StateNav() {
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
 export default StateNav;

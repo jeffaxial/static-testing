@@ -1,4 +1,4 @@
-import { ComponentClass, FunctionComponent } from "react";
+import { ComponentClass, FunctionComponent } from 'react';
 
 export interface RouteConfig {
   path: string;

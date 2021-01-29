@@ -10,20 +10,11 @@ interface Props {
 function List(props: Props) {
   return (
     <div className="List">
-      {props.todos.map(
-        (todo, index) => {
-          return (
-            <Task
-              key={index}
-              index={index}
-              todo={todo}
-              handleClick={props.handleClick}
-            />
-          )
-        }
-      )}
+      {props.todos.map((todo, index) => {
+        return <Task key={index} index={index} todo={todo} handleClick={props.handleClick} />;
+      })}
     </div>
-  )
+  );
 }
 
 export default List;
