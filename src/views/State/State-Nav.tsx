@@ -9,9 +9,6 @@ function StateNav() {
           <NavLink to="/state/local">Local</NavLink>
         </li>
         <li>
-          <NavLink to="/state/parent">Parent</NavLink>
-        </li>
-        <li>
           <NavLink to="/state/global">Global</NavLink>
         </li>
       </ul>
