@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import './State.scss';
 import { Todo } from '../../interfaces/Todos-Interface';
 import StateLocal from './State-Local';
 import StateGlobal from './State-Global';
