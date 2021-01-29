@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { StarWarsCharacterInterface } from '../../interfaces/StarWars';
 import StarWarsCharacter from './Character';
 

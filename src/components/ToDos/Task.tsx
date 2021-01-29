@@ -10,16 +10,10 @@ interface Props {
 function Task(props: Props) {
   return (
     <div className="Task">
-      <span
-        style={{ textDecoration: props.todo.done ? 'line-through' : 'none' }}
-      >{props.todo.value}</span>
-      <button
-        onClick={() => props.handleClick(props.index)}
-      >
-        { props.todo.done ? 'Mark Not Done': 'Mark Done' }
-      </button>
+      <span style={{ textDecoration: props.todo.done ? 'line-through' : 'none' }}>{props.todo.value}</span>
+      <button onClick={() => props.handleClick(props.index)}>{props.todo.done ? 'Mark Not Done' : 'Mark Done'}</button>
     </div>
-  )
+  );
 }
 
 export default Task;

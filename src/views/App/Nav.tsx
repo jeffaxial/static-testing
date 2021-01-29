@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import { appRoutes } from './App';
 import { RouteConfig } from '../../interfaces/Routes';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Todo } from '../interfaces/Todos-Interface';
 
 export interface StateContextInterface {

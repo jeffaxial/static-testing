@@ -20,13 +20,6 @@ function HttpAxios() {
     setLoadingCharacters(false);
   };
 
-  const getData2 = async () => {
-    setLoadingCharacters(true);
-    const response = await axios('https://swapi.co/api/people');
-    setCharacters(response.data.results);
-    setLoadingCharacters(false);
-  };
-
   return (
     <div className="HttpXHR Content-Padded">
       <h1>Http Axios</h1>

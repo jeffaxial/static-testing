@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 function addProps(Component: any) {
   return <Component testProp="test" />;

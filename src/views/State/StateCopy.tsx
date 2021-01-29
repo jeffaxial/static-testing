@@ -24,14 +24,14 @@ function State() {
 
   // const query = new URL(window.location).searchParams.get('query')
 
-  const testVal: string;
+  let testVal: string = '';
 
   return (
     <div className="State Content-Wrapper">
       <Fragment>
         <input
-          onChange={(evt) => {
-            testVal = evt;
+          onChange={(evt: any) => {
+            testVal = evt.value;
           }}
         />
         {testVal}
