@@ -20,7 +20,7 @@ function StateLocal(props: Props) {
   ];
 
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
-  const [inputValue, setInputValue] = useState<string>(props.testQuery as string);
+  const [inputValue, setInputValue] = useState<string>(localStorage.getItem('test') as string);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
