@@ -50,6 +50,7 @@ function StateLocal(props: Props) {
   return (
     <div className="Todos-Local">
       <h1>Local State</h1>
+      <a href={inputValue}>Test Link</a>
       <Form
         inputValue={inputValue}
         handleChange={handleChange}
