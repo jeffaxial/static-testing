@@ -8,7 +8,6 @@ interface Props {
 }
 
 function createMarkup(value: any) {
-  console.log(value);
   return { __html: value };
 }
 
