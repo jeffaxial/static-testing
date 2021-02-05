@@ -7,14 +7,9 @@ interface Props {
   handleClick: (index: number) => void;
 }
 
-function createMarkup(value: any) {
-  return { __html: value };
-}
-
 function Task(props: Props) {
   return (
     <div className="Task" key={props.index}>
-      <span dangerouslySetInnerHTML={createMarkup(props.todo.value)}></span>
       <span style={{ textDecoration: props.todo.done ? 'line-through' : 'none' }}>{props.todo.value}</span>
       <button onClick={() => props.handleClick(props.index)}>{props.todo.done ? 'Mark Not Done' : 'Mark Done'}</button>
     </div>
