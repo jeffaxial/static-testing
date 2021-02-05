@@ -1,4 +1,4 @@
 export interface Todo {
-  value: string;
+  value: any;
   done: boolean;
 }
