@@ -1,0 +1,49 @@
+html, body, #root {
+  height: 100%;
+}
+.App {
+  display: flex;
+  min-height: 100%;
+  .Nav {
+    width: 200px;
+    background: #ccc;
+    flex-shrink: 0;
+  }
+  .Content {
+    flex-grow: 1;
+    h1 {
+      margin: 0;
+    }
+  }
+}
+.Content-Padded {
+  padding: 40px;
+}
+.Content-Wrapper {
+  display: flex;
+  height: 100%;
+  .Content {
+    h1 {
+      margin: 0;
+    }
+  }
+}
+.Nav-Sub {
+  width: 200px;
+  background: #bbb;
+  flex-shrink: 0;
+}
+ul.Nav-Links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li > a {
+    cursor: pointer;
+    display: block;
+    padding: 5px 20px;
+    color: black;
+    &.active {
+      color: brown;
+    }
+  }
+}
