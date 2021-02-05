@@ -49,6 +49,7 @@ function StateGlobal() {
                 inputValue={inputValue}
                 handleChange={handleChange}
                 handleSubmit={(evt) => handleSubmit(evt, todosContext)}
+                testQuery="nothing"
               />
               <List
                 todos={todosContext ? todosContext.todos : []}

@@ -5,6 +5,7 @@ interface Props {
   inputValue: string;
   handleChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (evt: React.FormEvent) => void;
+  testQuery?: string;
 }
 
 function Form(props: Props) {

@@ -3,7 +3,11 @@ import Form from '../../components/Todos/Form';
 import List from '../../components/Todos/List';
 import { Todo } from '../../interfaces/Todos-Interface';
 
-function StateLocal() {
+interface Props {
+  testQuery?: string;
+}
+
+function StateLocal(props: Props) {
   const initialTodos: Todo[] = [
     {
       value: 'Clean the kitchen',
@@ -16,7 +20,7 @@ function StateLocal() {
   ];
 
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>(props.testQuery as string);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
@@ -46,7 +50,12 @@ function StateLocal() {
   return (
     <div className="Todos-Local">
       <h1>Local State</h1>
-      <Form inputValue={inputValue} handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Form
+        inputValue={inputValue}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        testQuery={props.testQuery}
+      />
       {todos ? <List todos={todos} handleClick={handleClick} /> : undefined}
     </div>
   );
