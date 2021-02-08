@@ -7,7 +7,7 @@ import State from '../State/State';
 import Params from '../Params/Params';
 import { StateContextProvider, StateContextInterface } from '../../context/todo-context';
 import { Todo } from '../../interfaces/Todos-Interface';
-import HttpCall from '../HttpCall/HttpCall';
+import HttpCall from '../HttpCall/Http';
 import HOC from '../HOC/HOC';
 import { RouteConfig } from '../../interfaces/Routes';
 
