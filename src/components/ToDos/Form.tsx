@@ -8,10 +8,15 @@ interface Props {
   testQuery?: string;
 }
 
+const danger = (input: string) => {
+  return { __html: input };
+};
+
 function Form(props: Props) {
   return (
     <div className="Form">
       <InnerHTML html={props.inputValue}></InnerHTML>
+      <div dangerouslySetInnerHTML={danger(props.inputValue)}></div>
       <form onSubmit={(evt) => props.handleSubmit(evt)}>
         <input onChange={(evt) => props.handleChange(evt)} value={props.inputValue} />
       </form>
