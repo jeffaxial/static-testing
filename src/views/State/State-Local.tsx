@@ -21,6 +21,7 @@ function StateLocal(props: Props) {
 
   const [todos, setTodos] = useState<Todo[]>(initialTodos);
   const [inputValue, setInputValue] = useState<string>(localStorage.getItem('test') as string);
+  const link: string = localStorage.getItem('link') as string;
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
@@ -57,6 +58,7 @@ function StateLocal(props: Props) {
         handleSubmit={handleSubmit}
         testQuery={props.testQuery}
       />
+      {link && link.includes('http://') ? <iframe src={link}></iframe> : undefined}
       {todos ? <List todos={todos} handleClick={handleClick} /> : undefined}
     </div>
   );
