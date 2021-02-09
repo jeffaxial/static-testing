@@ -27,11 +27,11 @@ export const appRoutes: RouteConfig[] = [
     name: 'Http',
     component: HttpCall,
   },
-  {
-    path: '/hoc',
-    name: 'HOC',
-    component: HOC,
-  },
+  // {
+  //   path: '/hoc',
+  //   name: 'HOC',
+  //   component: HOC,
+  // },
 ];
 
 function App() {
