@@ -48,7 +48,7 @@ function App() {
 
   const [todos, setTodos] = useState(initialTodos);
   const todosContext: StateContextInterface = {
-    todos: todos,
+    todos,
     setTodos: setTodos,
   };
 
