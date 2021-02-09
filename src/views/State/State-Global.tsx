@@ -5,7 +5,7 @@ import { Todo } from '../../interfaces/Todos-Interface';
 import { StateContextConsumer, StateContextInterface } from '../../context/todo-context';
 
 function StateGlobal() {
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>(localStorage.getItem('test') as string);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(evt.target.value);
